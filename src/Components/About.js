@@ -1,76 +1,55 @@
-import React, { useState } from 'react';
+import React from 'react'
 
-export default function About() {
-
-    const [myStyle, setmyStyle] = useState({
-        color: 'black',
-        backgroundColor: 'white'
-    })
-
-    const [btntext, setBtnText] = useState("Enable Dark Mode")
-
-    const toggleStyle = () => {
-        if (myStyle.color ==='black') {
-            setmyStyle({
-                color: 'white',
-                backgroundColor: 'black'
-            })
-            setBtnText("Enable Light Mode")
-        } 
-        else {
-            setmyStyle({
-                color: 'black',
-                backgroundColor: 'white',
-                // border: '1px solid black'
-            })
-        setBtnText("Enable Dark Mode");
-        }
-    }
-
+const About = () => {
     return (
-        <div className='container' style={myStyle}>
-            <h1>About Us</h1>
-            <div className="accordion" id="accordionExample" style={myStyle}>
-                <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <button className="accordion-button" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
-                        </button>
-                    </h2>
-                    <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div className="accordion-body" style={myStyle}>
-                            <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div className="accordion-item" >
-                    <h2 className="accordion-header">
-                        <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div className="accordion-body" style={myStyle}>
-                            <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-                <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                        </button>
-                    </h2>
-                    <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div className="accordion-body" style={myStyle}>
-                            <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="container my-3">
-                <button className="btn btn-primary" onClick={toggleStyle}>{btntext}</button>
-            </div>
+        <div>
+            <h3>About TextUtility:-</h3>
+
+            <p>
+                TextUtility is a dynamic and versatile app providing a wide range of text editing and manipulation functionalities, all wrapped in a simple, user-friendly interface.
+            </p>
+            <h4>Main Features</h4>
+            <p>
+                <li>Accurate Character Count: Instantly tallies the number of characters in any text, providing exact counts whether you're working on a blog post, academic paper, or story.</li>
+                <li>Word Count: Calculates the total words in your text—handy for adhering to limits set by schools, publishers, or online platforms.</li>
+                <li>Case Conversion: Converts text to PascalCase or camelCase formats—especially beneficial for coding or structuring content.</li>
+                <li>Text Summarization: Some apps can summarize long texts or extract the main ideas, which is helpful for research or study</li>
+            </p>
+
+            <h4>Who Uses Text Utility Apps?
+            </h4>
+            <p>
+                <li>Students & Academics: For word/character counts, summarization, and formatting assignments.</li>
+                <li>Coders/Developers: For converting text cases, editing code snippets, and batch modifications.
+
+                </li>
+                <li>Editors & Writers: For correcting, analyzing, and formatting large documents.</li>
+                <li>Marketers & Digital Strategists: For preparing content and maintaining word/character limits.
+
+                </li>
+            </p>
+
+            <h4>
+                Benefits
+            </h4>
+
+            <p>
+                <li>Saves time by automating text manipulations.</li>
+                <li>Reduces manual effort in editing and formatting.</li>
+                <li>Provides insights and statistics for improved writing and document control.
+
+                </li>
+                <li>Enhances productivity in text-driven workflows.</li>
+            </p>
+
+            <h4>
+                In summary:
+            </h4>
+            <p>
+                A text utility app makes handling text quicker, easier, and smarter with features like counting, conversion, formatting, reversal, and more—all aimed at boosting productivity and reducing errors for anyone who works with text.
+            </p>
         </div>
     )
 }
+
+export default About

@@ -4,6 +4,12 @@ import './App.css';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
+// import Home from './Home';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -12,19 +18,30 @@ function App() {
     if (mode === 'light') {
       setMode('dark')
       document.body.style.backgroundColor = '#042743';
+      document.title = 'TExtUtil - Dark mode'
     }
     else {
       setMode('light')
       document.body.style.backgroundColor = 'white';
+      document.title = 'TExtUtil - Light mode'
     }
   }
   return (
     <>
+    <Router>
       <Navbar title="TextUtils" about="About" mode={mode} toggleMode={toggleMode} />
       <div className="container my-3">
-        <TextForm heading="Enter the text to analyze below" mode={mode} />
-        {/* <About /> */}
+        <Routes>
+
+          <Route exact path="/about"
+            element={<About />}/>
+
+        <Route path="/"element={<TextForm heading="Enter the text to analyze below" mode={mode}/>}/>
+        
+
+        </Routes>
       </div>
+      </Router>
     </>
   );
 
