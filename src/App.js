@@ -37,7 +37,7 @@ function App() {
             element={<About />}/> */}
 
         {/* <Route path="/"element={}/> */}
-        <TextForm heading="Enter the text to analyze below" mode={mode}/>
+        <TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces & Much More!" mode={mode}/>
         
 
         {/* </Routes> */}
